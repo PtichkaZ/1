@@ -15,7 +15,7 @@ namespace the_closest_range
     {
         static void Main(string[] args)
         {
-            Console.Write("Введите значение, с которым будут сравниваться все значения радиуса: ");
+            Console.Write("Г‚ГўГҐГ¤ГЁГІГҐ Г§Г­Г Г·ГҐГ­ГЁГҐ, Г± ГЄГ®ГІГ®Г°Г»Г¬ ГЎГіГ¤ГіГІ Г±Г°Г ГўГ­ГЁГўГ ГІГјГ±Гї ГўГ±ГҐ Г§Г­Г Г·ГҐГ­ГЁГї Г°Г Г¤ГЁГіГ±Г : ");
             bool g = false;
             int rang;
             do
@@ -24,7 +24,7 @@ namespace the_closest_range
             }
             while (g == false);
 
-            Console.Write("Введите количество радиусов, которые будут сравниваться: ");
+            Console.Write("Г‚ГўГҐГ¤ГЁГІГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г°Г Г¤ГЁГіГ±Г®Гў, ГЄГ®ГІГ®Г°Г»ГҐ ГЎГіГ¤ГіГІ Г±Г°Г ГўГ­ГЁГўГ ГІГјГ±Гї: ");
             g = false;
             int n;
             do
@@ -42,9 +42,10 @@ namespace the_closest_range
                 Console.WriteLine("\t"+range[q].range);
             }
 
-            Console.WriteLine("Ближайшие значения радиусов:");
+            Console.WriteLine("ГЃГ«ГЁГ¦Г Г©ГёГЁГҐ Г§Г­Г Г·ГҐГ­ГЁГї Г°Г Г¤ГЁГіГ±Г®Гў:");
             bool l = false;
             int min = range[0].min;
+            int stup = min < 20 ? 5: 19;
             var sortedUsers = range.OrderBy(u => u.min);
             foreach (Range u in sortedUsers)
             {
@@ -54,7 +55,7 @@ namespace the_closest_range
                     l = true;
                 }
 
-                if (min == u.min) Console.WriteLine("\t{0} (разница {1})", u.range, u.min);
+                if (min == u.min) Console.WriteLine("\t{0} (Г°Г Г§Г­ГЁГ¶Г  {1})", u.range, u.min);
             }
 
             /*var sortedRange = from u in range
@@ -63,7 +64,7 @@ namespace the_closest_range
 
             /*min = range[0].min;
             int r = 0;
-            Console.WriteLine("Ближайшие значения раниусов:");
+            Console.WriteLine("ГЃГ«ГЁГ¦Г Г©ГёГЁГҐ Г§Г­Г Г·ГҐГ­ГЁГї Г°Г Г­ГЁГіГ±Г®Гў:");
             do
             {
                 Console.WriteLine("\t{0}", range[r].range);
