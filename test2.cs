@@ -71,6 +71,7 @@ namespace the_closest_range
                 r++;
             }
             while (min == range[r].min);*/
+            int var_1 = 565;
             
         }
     }
